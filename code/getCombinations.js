@@ -15,7 +15,7 @@ function getCombinations(arr, selectNum) {
   return result;
 }
 
-const example = [0, 1, 3];
+const example = [2, 2, 4];
 const result = getCombinations(example, 3);
 console.log(result);
 
