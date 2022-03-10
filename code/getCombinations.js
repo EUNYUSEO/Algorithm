@@ -5,8 +5,8 @@ function getCombinations(arr, selectNum) {
   arr.forEach((fixed, index, origin) => {
     // origin = arr이다, 자기 자신 배열
     // const rest = origin; // 중복순열
-    const rest = [...origin.slice(0, index), ...origin.slice(index + 1)]; // 순열
-    // const rest = origin.slice(index + 1); // 조합
+    // const rest = [...origin.slice(0, index), ...origin.slice(index + 1)]; // 순열
+    const rest = origin.slice(index + 1); // 조합
     const combinations = getCombinations(rest, selectNum - 1);
     const attached = combinations.map((el) => [fixed, ...el]);
     result.push(...attached);
@@ -15,8 +15,8 @@ function getCombinations(arr, selectNum) {
   return result;
 }
 
-const example = [2, 2, 4];
-const result = getCombinations(example, 3);
+const example = [1, 1, 2, 4];
+const result = getCombinations(example, 2);
 console.log(result);
 
 // [1, 2, 3, 4, 5], 2
