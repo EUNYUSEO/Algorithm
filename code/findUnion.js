@@ -16,6 +16,9 @@ function main(n) {
 
   unionParent(arr, 1, 2);
   unionParent(arr, 2, 3);
+  unionParent(arr, 4, 6);
+  unionParent(arr, 6, 5);
+  unionParent(arr, 7, 8);
 
   console.log(arr);
 
@@ -23,6 +26,7 @@ function main(n) {
   console.log(findeParent(arr, 1, 3));
   console.log(findeParent(arr, 3, 5));
   console.log(findeParent(arr, 4, 5));
+  console.log(findeParent(arr, 6, 8));
 }
 
 // 부모 노드를 찾는 재귀 함수
@@ -51,4 +55,4 @@ function findeParent(arr, a, b) {
   else return false;
 }
 
-main(5);
+main(8);
